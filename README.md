@@ -385,6 +385,21 @@ editBtn.onclick = function () {
   editor.edit();
 }
 ```
+
+### focus()
+
+Puts focus on the editor or previewer (whichever is visible). Works just like
+doing plain old JavaScript and input focus like `someInput.focus()`. The
+benefit of using this method however, is that it handles cross browser issues
+and also will focus on the visible view (edit or preview).
+
+```
+showEditorBtn.onclick = function () {
+  editorWrapper.style.display = 'block'; // switch from being hidden from the user
+  editor.focus(); // Focus and allow user to start editing right away
+}
+```
+
 ### enterFullscreen()
 
 Puts the editor into fullscreen mode.
@@ -562,6 +577,12 @@ EpicEditor is set up to allow you to use _any_ parser that accepts and returns a
 For even more customization/optimization you can replace the default built-in processor on build. Running `jake build parser=path/to/parser.js` will override the default Marked build and replace it with your custom script.
 
 See the [custom parsers wiki page](https://github.com/OscarGodson/EpicEditor/wiki/Using-A-Custom-Parser) for more.
+
+## Support
+
+If you're having any problems with EpicEditor feel free to open a [new ticket](http://github.com/OscarGodson/EpicEditor/issues/new). Go ahead and ask us anything and we'll try to help however we can. If you need a little more help with implementing EpicEditor on your site we've teamed up with [CodersClan](http://codersclan.net) to offer support:
+
+<a href="http://codersclan.net/support/step1.php?repo_id=2"><img src="http://www.codersclan.net/graphics/getSupport_blue_big.png" width="160"></a>
 
 ## Contributing
 
